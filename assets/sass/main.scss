@@ -1,0 +1,11 @@
+@import 'abstracts/variables';
+
+@import'vendors/node_modules/bootstrap/scss/bootstrap.scss';
+
+@import 'base/reset';
+@import 'base/typography';
+
+@import 'layout/navigation';
+@import 'layout/header';
+@import 'layout/section';
+@import 'layout/prices';

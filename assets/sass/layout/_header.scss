@@ -1,0 +1,28 @@
+header{
+   
+    background-image: url(../img/bg-hero.svg);
+    background-size: contain;
+    height: 1000px;
+    background-repeat: no-repeat;
+
+    margin-top: 5vw;
+   
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    
+    @media (max-width: 576px) {    
+        grid-template-columns: 100%;       
+    }
+
+    /*object{
+        @media (min-width: 576px){
+        display: none;
+    }
+    }  */ 
+    
+}
+
+.hero-section{  
+    margin-left: 10vw;
+    margin-right: 10vw;
+}

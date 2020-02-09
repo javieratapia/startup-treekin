@@ -1,0 +1,44 @@
+nav{
+    display: flex;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    justify-content: space-between;
+    @media (max-width: 576px) { 
+    margin-top: 2vw;
+    }
+}
+
+.fa-bars{
+    
+    @media (min-width: 576px) { 
+        display: none;
+    }
+}
+.nav__list{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    @media (max-width: 576px) { 
+        display: none;
+    }
+    ul{
+        display: flex;
+        list-style-type: none;
+       align-items: center;
+        
+        li{
+            margin-top:1vw;
+            padding-left: 1vw;
+            
+        }
+        a{
+            text-decoration: none;
+           
+            
+        }
+        button{
+            border: 0;
+            padding: 0.5rem;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+body{
+    font-family: $raleway;
+}
+
+nav{
+    a{
+        color: $onix;
+    }
+    button{
+        background-color: $ball-blue;
+        color: $white;
+        
+    }
+}
+
+header{
+    h1{
+        font-weight: $bold;
+    }
+}
+
+section{
+    h2,h3{
+        font-weight: $bold;
+    }
+}
