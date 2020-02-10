@@ -1,0 +1,35 @@
+.nav__button{
+    text-decoration: none;
+    border: 0;
+    padding: 0.5rem;
+    background-color: $ball-blue;
+    color: $white;
+        
+    
+}
+
+.card__button{
+    border: 0;
+    background-color: $ball-blue;
+    color: $white;
+    padding: 0.5rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+ 
+}
+.card__button:hover, .card__button2:hover, .nav__button:hover{
+        background-color: $blue-lagoon;
+    }
+
+.card__button:focus, .card__button2:focus, .nav__button:focus{
+        background-color: $spanish-gray;
+}
+
+.card__button2{
+    border: 0;
+    background-color: $ball-blue;
+    color: $white;
+    padding: 0.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}

@@ -6,11 +6,6 @@ nav{
     a{
         color: $onix;
     }
-    button{
-        background-color: $ball-blue;
-        color: $white;
-        
-    }
 }
 
 header{
@@ -22,5 +17,21 @@ header{
 section{
     h2,h3{
         font-weight: $bold;
+    }
+}
+
+.contenido-prices{
+    h2{
+        color: $white;
+    }
+    h5{
+        font-weight: bold;
+    }
+}
+
+footer{
+    color: $white;
+    a{
+        color: $white;
     }
 }
