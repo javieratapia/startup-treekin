@@ -9949,22 +9949,39 @@ nav {
 }
 
 header {
-  background-image: url(../img/bg-hero.svg);
+  /*background-image: url(../img/bg-hero.svg);
   background-size: contain;
   height: 1000px;
   background-repeat: no-repeat;
+
   margin-top: 5vw;
+
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  /*object{
+  grid-template-columns: repeat(2,1fr);
+
+  @media (max-width: 576px) {    
+      grid-template-columns: 100%;       
+  }
+
+   2 veces comentado /*object{
       @media (min-width: 576px){
       display: none;
   }
   }  */
+  grid-template-columns: 100%;
 }
-@media (max-width: 576px) {
+@media (min-width: 576px) {
   header {
-    grid-template-columns: 100%;
+    background-image: url(../img/bg-hero.svg);
+    background-size: contain;
+    height: 1000px;
+    background-repeat: no-repeat;
+    margin-top: 5vw;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  header object {
+    display: none;
   }
 }
 
@@ -10011,7 +10028,7 @@ section h2 {
 
 .prices {
   background-image: url(../img/bg-price.svg);
-  background-size: cover;
+  background-size: 100%;
   height: 700px;
   background-repeat: no-repeat;
   padding-top: 15vw;
@@ -10020,6 +10037,9 @@ section h2 {
     margin: ;
 }
 */
+.contenedor-card {
+  background-color: #333745;
+}
 @media (min-width: 576px) {
   .contenedor-card {
     display: flex;
