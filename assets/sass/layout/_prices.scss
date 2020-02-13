@@ -1,56 +1,50 @@
 .prices{
-    background-image: url(../img/bg-price.svg);
-    background-size: 100%;
-    height: 700px;
+    /*background-image: url(../img/bg-price.svg);
+    background-size: cover;
+    
     background-repeat: no-repeat;
-    padding-top: 15vw;
+    padding-top: 15vw;*/
+    background-color: $onix;
+    position: relative;
+}
+
+.prices::before {
+    content: "";
+    position: absolute;
+    top: -25%;
+    left: 0;
+    height: 200px;
+    width: 140%;
+    //border-style: solid;
+    background: url(../img/bg-price.svg);
+    background-size: 100%;
+    z-index: -1;
     @media (max-width: 576px) { 
-        //padding-bottom: 100vw;
+        top: -15%;
+       
     }
+  }
+.contenedor-card{   
 
-}
-/*.contenido-prices{
-    margin: ;
-}
-*/
-.contenedor-card{
-    
-   background-color: $onix;
-        
+    //background-color: $onix;
+   justify-content: space-evenly;
    
-    
-    
-    @media (min-width: 576px) { 
-        display: flex;
-        justify-content: center;
-    }
+   display: flex;
+   flex-wrap: wrap;
 
-    .card-2{
-        margin-right: 4vw;
-    }
+   .card{
+       margin-bottom: 3vw;
+       ul{
+           margin-left: 1.5vw;
+       }
+   }
+    
+
 }
 
+.card:hover{
+    box-shadow: 8px 8px 10px $nickel;
+}
 .boton-bajo{
     margin-top: 110px;
 }
-/*.card{
-
-
-display: grid;
-    grid-template-columns: 10vw repeat(2,1fr) 10vw;
-    grid-column-gap: 5vw;
-    .card-2{
-        grid-column-start: 2;
-        grid-column-end: 3;
-    }   align-items: center;
-    justify-items: center;
-    @media (max-width: 576px) {   
-        margin-left: 5vw; 
-        margin-right: 5vw;
-        grid-template-columns:100%;
-        card-2{
-            grid-column-start: 1;
-            margin-bottom: 7vw;
-        }
-    }
-}*/

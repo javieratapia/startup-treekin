@@ -1,6 +1,15 @@
 footer{
-    display: flex;
+    /*display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;*/
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: 576px) {
+        grid-template-columns:100%;
+       p{
+           text-align: center;
+       }
+    }
     background-color: $raising-black;
     padding-left: 10vw;
     padding-right: 10vw;
@@ -10,10 +19,19 @@ footer{
     }
     ul{
         display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
         
     }
     li{
-        margin-right: 5rem;
+        margin-right: 1vw;
         list-style-type: none;
-    };
+    }
+    p{
+        text-align: right;
+        @media (max-width: 576px) {
+             text-align: center;
+           }
+        }
+    
 }

@@ -9883,6 +9883,9 @@ h3 {
 body {
   font-family: "Raleway", sans-serif;
 }
+body p {
+  font-size: 16px;
+}
 
 nav a {
   color: #333745;
@@ -9890,17 +9893,26 @@ nav a {
 
 header h1 {
   font-weight: 700;
+  font-size: 50px;
 }
 
 section h2, section h3 {
   font-weight: 700;
 }
+section h2 {
+  font-size: 40px;
+}
 
 .contenido-prices h2 {
   color: #FFF;
+  font-size: 40px;
 }
 .contenido-prices h5 {
   font-weight: bold;
+  font-size: 35px;
+}
+.contenido-prices h6 {
+  font-size: 20px;
 }
 
 footer {
@@ -9910,6 +9922,17 @@ footer a {
   color: #FFF;
 }
 
+@keyframes desvanecer {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 nav {
   display: flex;
   margin-left: 10vw;
@@ -9969,12 +9992,13 @@ header {
   }
   }  */
   grid-template-columns: 100%;
+  margin-top: 5vw;
 }
 @media (min-width: 576px) {
   header {
     background-image: url(../img/bg-hero.svg);
     background-size: contain;
-    height: 1000px;
+    height: 60vw;
     background-repeat: no-repeat;
     margin-top: 5vw;
     display: grid;
@@ -9998,17 +10022,16 @@ section h2 {
   margin-bottom: 5vw;
 }
 
+.carac {
+  margin-bottom: 10vw;
+}
+
 .contenido {
   display: grid;
   grid-template-columns: 10vw repeat(2, 1fr) 10vw;
   grid-column-gap: 5vw;
   align-items: center;
   justify-items: center;
-  /*display: flex;
-
-
-  margin-left: 10vw;
-  margin-right: 10vw;*/
 }
 .contenido object {
   grid-column-start: 2;
@@ -10016,82 +10039,119 @@ section h2 {
 }
 @media (max-width: 576px) {
   .contenido {
-    margin-left: 5vw;
-    margin-right: 5vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-bottom: 10vw;
     grid-template-columns: 100%;
   }
   .contenido object {
     grid-column-start: 1;
+    grid-column-end: 2;
     margin-bottom: 7vw;
+  }
+  .contenido h3 {
+    text-align: center;
   }
 }
 
-.prices {
-  background-image: url(../img/bg-price.svg);
-  background-size: 100%;
-  height: 700px;
-  background-repeat: no-repeat;
-  padding-top: 15vw;
+.appear {
+  animation: desvanecer 3s ease-in-out 0s infinite;
 }
-/*.contenido-prices{
-    margin: ;
-}
-*/
-.contenedor-card {
-  background-color: #333745;
-}
-@media (min-width: 576px) {
-  .contenedor-card {
+
+/*
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    margin-left: 10vw;
+    margin-right: 10vw;
+
+
+}*/
+.prices {
+  /*background-image: url(../img/bg-price.svg);
+  background-size: cover;
+
+  background-repeat: no-repeat;
+  padding-top: 15vw;*/
+  background-color: #333745;
+  position: relative;
+}
+
+.prices::before {
+  content: "";
+  position: absolute;
+  top: -25%;
+  left: 0;
+  height: 200px;
+  width: 140%;
+  background: url(../img/bg-price.svg);
+  background-size: 100%;
+  z-index: -1;
+}
+@media (max-width: 576px) {
+  .prices::before {
+    top: -15%;
   }
 }
-.contenedor-card .card-2 {
-  margin-right: 4vw;
+
+.contenedor-card {
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+}
+.contenedor-card .card {
+  margin-bottom: 3vw;
+}
+.contenedor-card .card ul {
+  margin-left: 1.5vw;
+}
+
+.card:hover {
+  box-shadow: 2px 2px 5px #726F73;
 }
 
 .boton-bajo {
   margin-top: 110px;
 }
 
-/*.card{
-
-
-display: grid;
-    grid-template-columns: 10vw repeat(2,1fr) 10vw;
-    grid-column-gap: 5vw;
-    .card-2{
-        grid-column-start: 2;
-        grid-column-end: 3;
-    }   align-items: center;
-    justify-items: center;
-    @media (max-width: 576px) {   
-        margin-left: 5vw; 
-        margin-right: 5vw;
-        grid-template-columns:100%;
-        card-2{
-            grid-column-start: 1;
-            margin-bottom: 7vw;
-        }
-    }
-}*/
 footer {
-  display: flex;
+  /*display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;*/
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   background-color: #221D23;
   padding-left: 10vw;
   padding-right: 10vw;
   padding-top: 3vw;
+}
+@media (max-width: 576px) {
+  footer {
+    grid-template-columns: 100%;
+  }
+  footer p {
+    text-align: center;
+  }
 }
 footer a {
   text-decoration: none;
 }
 footer ul {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 footer li {
-  margin-right: 5rem;
+  margin-right: 1vw;
   list-style-type: none;
+}
+footer p {
+  text-align: right;
+}
+@media (max-width: 576px) {
+  footer p {
+    text-align: center;
+  }
 }
 
 .nav__button {
