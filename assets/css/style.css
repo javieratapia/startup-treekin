@@ -10107,7 +10107,7 @@ section h2 {
 }
 
 .card:hover {
-  box-shadow: 2px 2px 5px #726F73;
+  box-shadow: 1rem 1rem 2rem #726F73;
 }
 
 .boton-bajo {
